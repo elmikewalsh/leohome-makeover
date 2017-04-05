@@ -1,0 +1,182 @@
+/*
+Theme Name: Leo Home Makeover
+Theme URI: http://imaginalgo.com/en/portfolio/tema-wp-leohome-makeover/
+Original Author: Leo Babauta
+Author: Imaginalgo (Mike Walsh)
+Original Author URI: http://leobabauta.com
+Author URI: http://imaginalgo.com
+Description: The minimalist personal website design of zenhabits author Leo Babauta at leobabauta.com, with some new options! For help please see <a href="http://leo.imaginalgo.com/install-this-leohome/">the documentation</a>.
+Version: 1.0
+License: Uncopyrighted
+License URI: http://zenhabits.net/open-source-blogging-feel-free-to-steal-my-content/
+
+This theme is uncopyrighted.
+Do whatever you'd like with it.
+*/
+/*
+Erase when options added:
+body bg: #fff
+body color: #000
+links:303030
+links visited: 303030
+links hover: 999999
+h2: 333
+h3: 303030
+*/
+body {
+	background-color: #fff;
+	font: 100%/140% helvetica-neue, helvetica, sans-serif;
+	width: 800px;
+	max-width: 96%;
+	margin: 0 auto;
+	text-align:center;
+	float:none;
+	margin-top:65px;
+}
+
+.centeralign {margin:0 auto;text-align:center;float:none;}
+
+#leo {margin:0;padding:0;}
+#leo dt {width:5em;}
+#leo ul, .footer ul {padding-left:0px;}
+#leo ul li {list-style: none; padding-left:0px;margin-left:0px;line-height:1.5;}
+#leo ul li a {vertical-align:top;} 
+.before-desc {float:left;width:105px;word-wrap:break-word;clear:both;margin-left:0px;}
+
+#leo-centered {margin:0 auto;text-align:left;float:left;}
+#leo-centered-home {margin:0 auto;text-align:center;float:none;}
+#leo-centered ul li #leo-centered-home ul li {display:inline-block;}
+/*#leo-centered ul, .footer ul {padding-left:0px;margin:0 auto;}*/
+#leo-centered-home ul {padding-top:30px; padding-left:0px;margin:0 auto;}
+/*leo-centered ul li {list-style: none; padding-left:0px;margin-left:0px;line-height:1.5;}*/
+#leo-centered ul li a {vertical-align:top;}
+.centered-before-desc {float:none;word-wrap:break-word;clear:both;margin-left:0px;}
+
+p {line-height: 1.4em;}	
+h2 {font-size: 1.4em; color:#333; line-height:28px; font-weight:normal;}
+h2 a:link {border-style: none;}
+h3, .footer {font-weight:normal; font-size: .9em; color:#303030; line-height:2.8em;clear:both;}
+h3 a:link, .footer a:link {border-style: none;}
+.footer ul li a{display:inline-block;}
+.footer li {list-style: none; text-transform: lowercase;display:inline-block;}
+.credits {font-size: .9em;margin-top:30px;}
+
+.menu-divider {margin:0;padding:0 2px 0 0;color: #303030;}
+li.menu-divider:last-child {display:none;}
+
+pre {line-height:1.4em}
+
+ol {margin:1em 0 2em 0;}
+li {line-height: 1.5em;}
+
+a:link {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none solid none; border-color: #C0C0C0;}
+a:visited {color: #303030; text-decoration: none; border-width: 0 0 1px 0; border-style: none none none non; border-color: #C0C0C0;}
+a:hover {color: #999; border-width: 0 0 1px 0; border-style: none none none non; border-color: #C0C0C0; text-decoration: none;}
+
+/*START OF RESPONSIVE COLUMNS TESTING
+*/
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+#pagewrap {
+	width: 978px;
+	max-width: 96%;
+	margin: 0 auto;
+}
+.wrapper {
+	overflow: hidden;
+}
+
+/************************************************************************************
+COLUMN
+*************************************************************************************/
+.col {
+
+	float: left;
+	margin-left: 3.2%;
+	margin-bottom: 30px;
+}
+.fullwidth .col {
+	float: none;
+	margin-left: 0;
+}
+/* grid4 col */
+.grid4 .col {
+	width: 22.6%;
+}
+/* grid3 col */
+.grid3 .col {
+	width: 31.2%;
+}
+/* grid2 col */
+.grid2 .col {
+	width: 48.4%;
+}
+/* clear col */
+.grid4 .col:nth-of-type(4n+1),
+.grid3 .col:nth-of-type(3n+1),
+.grid2 .col:nth-of-type(2n+1) {
+	margin-left: 0;
+	clear: left;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* reset cols to 3-column */
+@media screen and (max-width: 740px) {
+	/* grid4 */
+	.grid4 .col {
+		width: 31.2%;
+	}
+	.grid4 .col:nth-of-type(4n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+/* reset cols to 2-column */
+@media screen and (max-width: 600px) {
+	/* grid4 */
+	.grid4 .col {
+		width: 48.4%;
+	}
+	.grid4 .col:nth-of-type(3n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid4 .col:nth-of-type(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+
+	/* grid3 */
+	.grid3 .col {
+		width: 48.4%;
+	}
+	.grid3 .col:nth-of-type(3n+1) {
+		margin-left: 3.2%;
+		clear: none;
+	}
+	.grid3 .col:nth-of-type(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+/* reset cols to fullwidth */
+@media screen and (max-width: 400px) {
+	/* grid4 */
+	.col {
+		width: 100% !important;
+		margin-left: 0 !important;
+		clear: none !important;
+	}
+}
